@@ -3,11 +3,11 @@
 {
   imports =
     [
-      ./dskt/hardware-configuration.nix
-      ./dskt/applications.nix
-      ./dskt/system.nix
-      ./dskt/boot.nix
-      ./dskt/users.nix
+      ./hardware-configuration.nix
+      ./applications.nix
+      ./system.nix
+      ./boot.nix
+      ./users.nix
     ];
 
 }
