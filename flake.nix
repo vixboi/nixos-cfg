@@ -26,7 +26,7 @@
 
   nixosConfigurations = {
    dskt = nixpkgs.lib.nixosSystem {
-     specialArgs = {inherit system pkgs; };
+     specialArgs = {inherit system; };
      
      modules = [
      ./nixos/configuration.nix
