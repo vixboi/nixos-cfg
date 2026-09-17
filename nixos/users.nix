@@ -11,8 +11,7 @@
     description = "ali";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
+      
     ];
   };
 

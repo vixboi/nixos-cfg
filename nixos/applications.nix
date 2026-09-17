@@ -9,6 +9,8 @@
     wget
     kdePackages.sddm-kcm
     pkgs.vscodium
+    emacs
+    python3
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -21,7 +23,6 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
-
 
   programs.gamescope = {
     enable = true;
