@@ -29,11 +29,22 @@
      specialArgs = {inherit system; };
      
      modules = [
-     ./nixos/configuration.nix
+     ./nixos/dskt/configuration.nix
      aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
      ];
     };
-   };
+   
+
+   lptp = nixpkgs.lib.nixosSystem {
+     specialArgs = {inherit system; };
+     
+     modules = [
+     ./nixos/lptp/configuration.nix
+     aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
+     ];
+    };
+   
 
    };
+ };
 }
