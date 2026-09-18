@@ -9,7 +9,6 @@
     wget
     kdePackages.sddm-kcm
     pkgs.vscodium
-    emacs
     python3
   ];
 

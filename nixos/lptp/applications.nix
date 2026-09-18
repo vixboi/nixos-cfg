@@ -9,25 +9,12 @@
     wget
     kdePackages.sddm-kcm
     pkgs.vscodium
-    emacs
     python3
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 #------------------------------APPS----------------------------------
-
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-  };
-
-  programs.gamescope = {
-    enable = true;
-    capSysNice = true;
-  };
 
   programs.firefox = {
     enable = true;
