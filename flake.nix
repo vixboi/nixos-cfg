@@ -3,13 +3,16 @@
 
   inputs = {
    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst";
-  aerothemeplasma-nix = {
+
+   nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
+   aerothemeplasma-nix = {
       url = "github:nyakase/aerothemeplasma-nix/26.05";
       inputs.nixpkgs.follows = "nixpkgs";
-
    };
+
   };
-  outputs = { self, nixpkgs, aerothemeplasma-nix }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, aerothemeplasma-nix }:
   let
     system = "x86_64-linux";
 
@@ -26,7 +29,13 @@
 
   nixosConfigurations = {
    dskt = nixpkgs.lib.nixosSystem {
-     specialArgs = {inherit system; };
+     specialArgs = {
+      inherit system; 
+      unstablePkgs = import nixpkgs-unstable {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+       };
+      };
      
      modules = [
      ./nixos/dskt/configuration.nix

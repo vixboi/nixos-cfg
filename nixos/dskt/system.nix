@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, unstablePkgs, ... }:
 
 {
 
@@ -27,8 +27,14 @@
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
-
-  hardware.graphics.enable32Bit = true;
-
+  
   powerManagement.cpuFreqGovernor = "performance";
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    package = unstablePkgs.mesa;
+    package32 = unstablePkgs.pkgsi686Linux.mesa;
+  };
+
   }

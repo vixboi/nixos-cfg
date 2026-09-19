@@ -11,6 +11,7 @@
     pkgs.vscodium
     python3
     protonplus
+    prismlauncher
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -44,7 +45,8 @@
     plymouth.enable = true;
   };
   };
-
+  
+  programs.gamemode.enable = true;
 
 #------------------------------SERVICES----------------------------------
 

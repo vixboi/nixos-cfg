@@ -9,6 +9,10 @@
   boot.plymouth.enable = true;
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  boot.kernel.sysctl = {
+  "vm.max_map_count" = 2147483642;
+  };
 
 }
