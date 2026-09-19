@@ -3,7 +3,7 @@
 {
 
   environment.shellAliases = {
-    rebuild = "sudo nixos-rebuild switch --flake ~/system/#lptp";
+    rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#lptp";
   };
 
   users.users."ali" = {

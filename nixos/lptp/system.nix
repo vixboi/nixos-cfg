@@ -4,7 +4,7 @@
 
   system.stateVersion = "26.05";
 
-  networking.hostName = "dskt";
+  networking.hostName = "lptp";
 
 
   # Enable networking
@@ -29,5 +29,10 @@
   };
 
   hardware.graphics.enable32Bit = true;
+
+  hardware.bluetooth = {
+  enable = true;
+  powerOnBoot = true;
+  };
 
   }

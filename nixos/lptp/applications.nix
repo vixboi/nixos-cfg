@@ -11,7 +11,7 @@
     pkgs.vscodium
     python3
   ];
-
+  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 #------------------------------APPS----------------------------------
@@ -34,7 +34,8 @@
 #------------------------------SERVICES----------------------------------
 
   services.displayManager.defaultSession = "aerothemeplasma";
-
+  
+  # Enable remote SSH access
   services.openssh.enable = true;
 
   # Enable the X11 windowing system.
@@ -44,10 +45,14 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  
+  # Enbale support for the fingerprint scanner
+  services.fprintd.enable = true;
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "gb";
     variant = "";
   };
 
@@ -68,6 +73,7 @@
 
   services.xserver.excludePackages = [ pkgs.xterm ];
 
+  services.flatpak.enable = true;
 
 }
 

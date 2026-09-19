@@ -19,6 +19,7 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
+    
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
@@ -80,6 +81,7 @@
 
   services.xserver.excludePackages = [ pkgs.xterm ];
 
+    services.flatpak.enable = true;
 
 }
 
