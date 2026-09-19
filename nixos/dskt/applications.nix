@@ -10,6 +10,7 @@
     kdePackages.sddm-kcm
     pkgs.vscodium
     python3
+    protonplus
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -43,6 +44,7 @@
     plymouth.enable = true;
   };
   };
+
 
 #------------------------------SERVICES----------------------------------
 

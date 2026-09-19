@@ -30,4 +30,5 @@
 
   hardware.graphics.enable32Bit = true;
 
+  powerManagement.cpuFreqGovernor = "performance";
   }
